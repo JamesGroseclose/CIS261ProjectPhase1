@@ -6,10 +6,14 @@ def GetEmpName():
     return empname
 #for the next three functions, you need to convert the input to a float, e.g., varname = float(input('descripion of input:  '))
 #write the GetHoursWorked function
-
+def GetHoursWorked():
+    hours = float(input('Enter hours worked: '))
+    return hours
 
 #write the GetHourlyRate function
-
+def GetHourlyRate():
+    hourlyrate = float(input('Enter hourly rate: '))
+    return hourlyrate
 
 # write the GetTaxRate function
 
@@ -51,12 +55,15 @@ if __name__ == "__main__":
         if (empname.upper() == "END"):
             break
         # write the code to assign to hours the return value from GetHoursWorked
+        hours = GetHoursWorked()
 
         # write the code to assign to hourlyrate the return value from GetHourlyRate
+        hourlyrate = GetHourlyRate()
 
         # write the code to assign to taxrate the return value from GetTaxRate
-        
-        grosspay, incometax, netpay = CalcTaxAndNetPay(hours, hourlyrate, taxrate)
+        taxrate = GetTaxRate() 
+
+        grosspay, incometax, netpay = (hours, hourlyrate, taxrate)
         printinfo(empname, hours, hourlyrate, grosspay, taxrate, incometax, netpay)
         TotEmployees += 1
         TotHours += hours

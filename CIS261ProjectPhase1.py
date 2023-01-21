@@ -16,6 +16,9 @@ def GetHourlyRate():
     return hourlyrate
 
 # write the GetTaxRate function
+def GetTaxRate():
+    taxrate = float(input('Enter tax rate: '))
+    return taxrate
 
 
 
@@ -31,7 +34,12 @@ def printinfo(empname, hours, hourlyrate,grosspay, taxrate, incometax, netpay):
     print("Hours Worked: ", f"{hours:,.2f}")
     # write the lines of code to display hourlyrate, grosspay, taxrate, incometax and netpay with correct formatting
     # taxrate needs to be formatted as percentage
-
+    print("Hourly Rate: ", f"{hourlyrate:,.2f}")
+    print("Gross Pay: ", f"{grosspay:,.2f}")
+    print("Hours Worked: ", f"{hours:,.2%}")
+    print("Income Tax: ", f"{incometax:,.2f}")
+    print("Net Pay: ", f"{netpay:,.2f}")
+    
 
 
 

@@ -29,14 +29,14 @@ def CalcTaxAndNetPay(hours, hourlyrate, taxrate):
     netpay = grosspay - incometax
     return grosspay, incometax, netpay
 
-def printinfo(empname, hours, hourlyrate,grosspay, taxrate, incometax, netpay):
+def printinfo(empname, hours, hourlyrate, grosspay, taxrate, incometax, netpay):
     print("Name:  ", empname) 
     print("Hours Worked: ", f"{hours:,.2f}")
     # write the lines of code to display hourlyrate, grosspay, taxrate, incometax and netpay with correct formatting
     # taxrate needs to be formatted as percentage
     print("Hourly Rate: ", f"{hourlyrate:,.2f}")
     print("Gross Pay: ", f"{grosspay:,.2f}")
-    print("Tax Rate: ", f"{taxrate:,.2%}")
+    print("Tax Rate: ", f"{taxrate:,.1%}")
     print("Income Tax: ", f"{incometax:,.2f}")
     print("Net Pay: ", f"{netpay:,.2f}")
     
